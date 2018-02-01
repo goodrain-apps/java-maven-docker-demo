@@ -8,6 +8,6 @@ WORKDIR /app
 
 EXPOSE 5000
 
-RUN mvn -B -DskipTests=true clean install
+RUN mvn -B --settings -DskipTests=true clean install
 
 ENTRYPOINT ["/app/run.sh"]
